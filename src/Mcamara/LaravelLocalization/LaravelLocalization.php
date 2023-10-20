@@ -126,9 +126,9 @@ class LaravelLocalization
      *
      * @throws UnsupportedLocaleException
      */
-    public function __construct()
+    public function __construct($app = null)
     {
-        $this->app = app();
+        $this->app = $app ?? app();
 
         $this->configRepository = $this->app['config'];
         $this->view = $this->app['view'];
